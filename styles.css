@@ -327,7 +327,7 @@
 			min-height: 16px;
 		}
 		.book-info{
-			max-height: 2.4em;
+			height: 2.4em;
 			overflow: hidden;
 		}
 		.author
