@@ -36,6 +36,14 @@
 			color:#fff;
 			padding: 7px;
 		}
+		.header-info .container,.header-menu .container,.header-content .container{
+			display: flex;
+			justify-content: space-between;
+		}
+		.info-item,.menu-item,.content-item{
+			align-self: stretch;
+			padding-right: 5px;
+		}
 		.header-menu
 		{
 			border-bottom: #69c3e8 1px solid;
@@ -47,12 +55,10 @@
 			color:#fff;
 			padding: 10px;
 		}
-		.header-content .container
+		.header form
 		{
-			padding-top: 25px;
-		}
-		form
-		{
+			width: 500px;
+			margin-top: 10px;
 			display: flex;
 			justify-content: center;
 		}
@@ -67,8 +73,13 @@
 		.search-btn
 		{
 			height: 40px;
-    		width: 10.638%;
+    		width: 40px;
     		border-radius: 0 5px 5px 0;
+		}
+		.bucket{
+			margin-top: 10px;
+			justify-content: flex-end;
+			display: inline-flex;
 		}
 		.catalog
 		{
@@ -284,19 +295,19 @@
 		.novelties h2,.bestsellers h2{
 			font-weight: 700;
 			font-size: 18px;
-			margin: 10px 0;
 			color: #26a9e0;
 		}
 		.novelties a,.bestsellers a{
-			margin-top: 20px;
+			margin: 10px 0;
 			text-decoration: none;
 			color: #26a9e0;
 		}
 		.card-group{
-			overflow: hidden;
+			position: relative;
 		}
 		.card
 		{
+			display: inline-block;
 			width: 240px;
 			border-radius: 4px;
 			padding: 15px;
@@ -333,6 +344,7 @@
 		.author
 		{
 			color: grey;
+			overflow: hidden;
 		}
 		.card-info{
 			margin-top: 12px;
@@ -348,16 +360,29 @@
 		{
 			margin-top: 25px;
 			padding-top: 35px;
+			padding-left: 80px;
+			padding-right: 80px;
 			background: #26a9e0;
 			color: #fff;
 			line-height: 24px;
+		}
+		.footer .col-md-4{
+			align-self: stretch;
 		}
 		.footer ul{
 			list-style: none;
 			padding: 0;
 			margin: 0;
 		}
+		.footer form{
+			display: flex;
+			justify-content: flex-start;
+		}
+		.footer button{
+			border-radius: 0 5px 5px 0;
+		}
 		.email-input{
+			height: 38px;
 			border: none;
 			border-radius: 5px 0 0 5px;
 			padding: 0 0 0 10px;
@@ -369,14 +394,54 @@
 			width: 120px;
 		}
 		.copyright{
-			padding-left: 80px;
 			padding-right: 20px;
-			margin-bottom: 25px;
 			font-size: 11px;
 			color: rgba(255,255,255,.6);
 		}
+		.pay-cards{
+			display: flex;
+			justify-content: space-around;
+		}
 		.pay-card{
 			width: 44px;
-			margin: 5px 5px 0 0;
-			padding: 0;
+			margin: 5px 5px 5px 0;
 		}
+
+
+	@media (max-width: 1200px) {
+		.header form{
+			width: 250px;
+			}
+		.card-group{
+			display: inline-block;
+		}
+		.img-block{
+			margin: auto;
+		}
+
+    }
+    @media (max-width: 768px) {
+		.header form{
+			width: 250px;
+			}	
+		.header-content .container{
+			display: block;
+			align-content: center;
+		}
+		.card-group{
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+		}
+		.pay-cards{
+			justify-content: flex-start;
+		}
+		
+    }
+    @media (max-width: 576px) {
+		.bucket img{
+			display: none;
+		}
+    }
