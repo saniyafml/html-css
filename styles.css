@@ -119,6 +119,7 @@
 			background-color: #fff;
 			border: #0000004d 1px solid;
 			padding: 12px 16px;
+			z-index: 1;
 		}
 		.main
 		{
